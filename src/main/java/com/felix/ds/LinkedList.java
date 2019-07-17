@@ -73,7 +73,6 @@ public class LinkedList<T> {
 			}
 		}
 
-		@SuppressWarnings("unused")
 		Node<T> prevNode = head;
 		Node<T> currNode = head.getNext();
 		while (currNode != null) {
