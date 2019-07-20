@@ -34,7 +34,7 @@ public class QueueTest {
 
 	@Test
 	public void testEnqueue_Basic() {
-		Queue<Integer> queue = new Queue<>(Integer.class);
+		Queue<Integer> queue = new Queue<>(Integer.class, 6);
 		assertEquals(true, queue.isEmpty());
 		assertEquals(false, queue.isFull());
 		
@@ -46,6 +46,7 @@ public class QueueTest {
 		queue.enqueue(30);
 		queue.enqueue(40);
 		queue.enqueue(50);
+		assertEquals(5, queue.size());
 		queue.enqueue(60);
 		assertEquals(false, queue.isEmpty());
 		assertEquals(true, queue.isFull());
@@ -57,7 +58,7 @@ public class QueueTest {
 
 	@Test
 	public void testDequeue_Basic() {
-		Queue<String> queue = new Queue<>(String.class);
+		Queue<String> queue = new Queue<>(String.class, 6);
 		assertEquals(true, queue.isEmpty());
 		assertEquals(false, queue.isFull());
 		
@@ -66,6 +67,7 @@ public class QueueTest {
 		assertEquals(false, queue.isEmpty());
 		assertEquals(false, queue.isFull());
 		
+		assertEquals(2, queue.size());
 		assertEquals("A", queue.dequeue());
 		assertEquals("B", queue.dequeue());
 		assertEquals(true, queue.isEmpty());
@@ -77,7 +79,7 @@ public class QueueTest {
 	
 	@Test
 	public void testPeek() {
-		Queue<Double> queue = new Queue<>(Double.class);
+		Queue<Double> queue = new Queue<>(Double.class, 6);
 		assertEquals(true, queue.isEmpty());
 		assertEquals(false, queue.isFull());
 		
@@ -91,6 +93,8 @@ public class QueueTest {
 		assertEquals(false, queue.isEmpty());
 		assertEquals(false, queue.isFull());
 		
+		assertEquals(1, queue.size());
+		
 		assertEquals(new Double(20.5), queue.dequeue());
 		assertEquals(true, queue.isEmpty());
 		assertEquals(false, queue.isFull());
@@ -100,21 +104,33 @@ public class QueueTest {
 	
 	@Test
 	public void testEnqueueDequeuePeekCombination() {
-		Queue<Integer> queue = new Queue<>(Integer.class);
+		Queue<Integer> queue = new Queue<>(Integer.class, 6);
+		log.info("size is = {}", queue.size());
+		assertEquals(0, queue.size());
 		queue.enqueue(0);
 		queue.enqueue(10);
 		queue.enqueue(20);
+		log.info("size is = {}", queue.size());
+		assertEquals(3, queue.size());
 		queue.peek();
 		queue.peek();
 		queue.peek();
+		log.info("size is = {}", queue.size());
+		assertEquals(3, queue.size());
 		queue.enqueue(30);
 		queue.enqueue(40);
+		log.info("size is = {}", queue.size());
+		assertEquals(5, queue.size());
 		queue.peek();
 		queue.dequeue();
 		queue.dequeue();
+		log.info("size is = {}", queue.size());
+		assertEquals(3, queue.size());
 		queue.enqueue(null);
 		queue.enqueue(100);
 		queue.enqueue(1000);
+		log.info("size is = {}", queue.size());
+		assertEquals(6, queue.size());
 		assertEquals(false, queue.isEmpty());
 		assertEquals(true, queue.isFull());
 		
@@ -124,13 +140,19 @@ public class QueueTest {
 		assertEquals(true, queue.isFull());
 		
 		queue.dequeue();
+		log.info("size is = {}", queue.size());
+		assertEquals(5, queue.size());
 		assertEquals(false, queue.isFull());
 
 		queue.dequeue();
 		queue.dequeue();
 		queue.dequeue();
 		queue.dequeue();
+		log.info("size is = {}", queue.size());
+		assertEquals(1, queue.size());
 		queue.dequeue();
+		log.info("size is = {}", queue.size());
+		assertEquals(0, queue.size());
 		assertEquals(true, queue.isEmpty());
 		assertEquals(false, queue.isFull());
 	}

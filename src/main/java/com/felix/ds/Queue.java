@@ -10,14 +10,15 @@ import lombok.extern.log4j.Log4j2;
  */
 @Log4j2
 public class Queue<T> {
-	private static final int MAX_LENGTH = 6;
 	private static final int SPECIAL_EMPTY_VALUE = -1;
 	private final T[] elements;
 
 	private int head = SPECIAL_EMPTY_VALUE;
 	private int tail = SPECIAL_EMPTY_VALUE;
 
-	public Queue(Class<T> clazz) {
+	@SuppressWarnings("unchecked")
+	public Queue(Class<T> clazz, int MAX_LENGTH) {
+
 		elements = (T[]) Array.newInstance(clazz, MAX_LENGTH);
 		log.info("Creating a new Queue({})", super.toString());
 	}
@@ -62,5 +63,21 @@ public class Queue<T> {
 		log.info("Peeking {}", data);
 		return data;
 	}
-	
+
+	private void printHeadTail() {
+		log.info("head={} :: tail={}", head, tail);
+	}
+
+	public int size() {
+		printHeadTail();
+		if (isEmpty())
+			return 0;
+		else if (isFull())
+			return elements.length;
+		else if (head <= tail)
+			return tail - head + 1;
+		else
+			return elements.length - head + tail + 1;
+	}
+
 }
