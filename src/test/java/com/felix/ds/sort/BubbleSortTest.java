@@ -1,6 +1,6 @@
 package com.felix.ds.sort;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -13,7 +13,7 @@ import lombok.extern.log4j.Log4j2;
  *
  */
 @Log4j2
-public class SelectionSortTest {
+public class BubbleSortTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -25,22 +25,22 @@ public class SelectionSortTest {
 	}
 
 	@Test
-	public void testSelectionSort_One() {
-		int[] array = {9,1,8,2,3,7,4,6,5};
-		log.info("Array before selection sorting ==> {}", array);
-		SelectionSort.sort(array);
+	public void testBubbleSort_One() {
+		int[] array = { 9, 1, 8, 2, 3, 7, 4, 6, 5 };
+		log.info("Array before bubble sorting ==> {}", array);
+		BubbleSort.sort(array);
 		String sorted = Util.toString(array);
-		log.info("Array after selection sorting ==> {}", array);
+		log.info("Array after bubble sorting ==> {}", array);
 		assertEquals("[1, 2, 3, 4, 5, 6, 7, 8, 9]", sorted);
 	}
 
 	@Test
-	public void testSelectionSort_Two() {
-		int[] array = {989,111,288,812,743,367,464,696,515};
-		log.info("Array before selection sorting ==> {}", array);
-		SelectionSort.sort(array);
+	public void testBubbleSort_Two() {
+		int[] array = { 989, 111, 288, 812, 743, 367, 464, 696, 515 };
+		log.info("Array before bubble sorting ==> {}", array);
+		BubbleSort.sort(array);
 		String sorted = Util.toString(array);
-		log.info("Array after selection sorting ==> {}", array);
+		log.info("Array after bubble sorting ==> {}", array);
 		assertEquals("[111, 288, 367, 464, 515, 696, 743, 812, 989]", sorted);
 	}
 

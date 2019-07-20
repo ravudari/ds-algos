@@ -16,6 +16,7 @@ public class SelectionSort {
 					Util.swap(array, i, j);
 				}
 			}
+			log.info("{} ==> {}", i+1, Util.toString(array));
 		}
 		log.info(" ====*====  END of Selection Sort  ====*====");
 	}
