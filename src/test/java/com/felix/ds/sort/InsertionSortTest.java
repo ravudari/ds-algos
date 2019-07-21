@@ -74,4 +74,13 @@ public class InsertionSortTest {
 		assertEquals("[111, 288, 367, 464, 515, 696, 743, 812, 989]", sorted);
 	}
 
+	@Test
+	public void testInsertionSort_WithDuplicateElements() {
+		int[] array = { 9, 1, 8, 2, 3, 7, 9, 1, 8, 2, 3, 7 };
+		log.info("Array before Insertion sorting ==> {}", array);
+		InsertionSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Insertion sorting ==> {}", array);
+		assertEquals("[1, 1, 2, 2, 3, 3, 7, 7, 8, 8, 9, 9]", sorted);
+	}
 }

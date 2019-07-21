@@ -16,9 +16,13 @@ public class Util {
 	}
 
 	public static String toString(int[] array) {
+		return toString(array, 0, array.length-1);
+	}
+	
+	public static String toString(int[] array, int startIndex, int endIndex) {
 		StringBuilder data = new StringBuilder();
-		data.append("[").append(array[0]);
-		for (int i = 1; i < array.length; i++) {
+		data.append("[").append(array[startIndex]);
+		for (int i = startIndex+1; i <= endIndex; i++) {
 			data.append(", ").append(array[i]);
 		}
 		data.append("]");

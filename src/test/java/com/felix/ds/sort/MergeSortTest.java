@@ -73,5 +73,15 @@ public class MergeSortTest {
 		log.info("Array after Merge sorting ==> {}", array);
 		assertEquals("[99, 108, 111, 288, 367, 464, 515, 696, 743, 812, 989]", sorted);
 	}
+	
+	@Test
+	public void testMergeSort_WithDuplicateElements() {
+		int[] array = { 9, 1, 8, 2, 3, 7, 9, 1, 8, 2, 3, 7 };
+		log.info("Array before Merge sorting ==> {}", array);
+		MergeSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Merge sorting ==> {}", array);
+		assertEquals("[1, 1, 2, 2, 3, 3, 7, 7, 8, 8, 9, 9]", sorted);
+	}
 
 }

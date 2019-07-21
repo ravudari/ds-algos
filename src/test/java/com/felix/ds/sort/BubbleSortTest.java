@@ -74,4 +74,13 @@ public class BubbleSortTest {
 		assertEquals("[111, 288, 367, 464, 515, 696, 743, 812, 989]", sorted);
 	}
 
+	@Test
+	public void testBubbleSort_WithDuplicateElements() {
+		int[] array = { 9, 1, 8, 2, 3, 7, 9, 1, 8, 2, 3, 7 };
+		log.info("Array before Bubble sorting ==> {}", array);
+		BubbleSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Bubble sorting ==> {}", array);
+		assertEquals("[1, 1, 2, 2, 3, 3, 7, 7, 8, 8, 9, 9]", sorted);
+	}
 }
