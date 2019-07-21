@@ -25,6 +25,36 @@ public class ShellSortTest {
 	}
 
 	@Test
+	public void testShellSort_WithOneElement() {
+		int[] array = { 9 };
+		log.info("Array before Shell sorting ==> {}", array);
+		ShellSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Shell sorting ==> {}", array);
+		assertEquals("[9]", sorted);
+	}
+
+	@Test
+	public void testShellSort_WithTwoElements() {
+		int[] array = { 9, 6 };
+		log.info("Array before Shell sorting ==> {}", array);
+		ShellSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Shell sorting ==> {}", array);
+		assertEquals("[6, 9]", sorted);
+	}
+
+	@Test
+	public void testShellSort_WithThreeElements() {
+		int[] array = { 11, 9, 6 };
+		log.info("Array before Shell sorting ==> {}", array);
+		ShellSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Shell sorting ==> {}", array);
+		assertEquals("[6, 9, 11]", sorted);
+	}
+	
+	@Test
 	public void testShellSort_One() {
 		int[] array = { 9, 1, 8, 2, 3, 7, 26, 4, 6, 5, 20, 30 };
 		log.info("Array before Shell sorting ==> {}", array);

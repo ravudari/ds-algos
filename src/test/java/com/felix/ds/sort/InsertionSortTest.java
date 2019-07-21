@@ -23,6 +23,36 @@ public class InsertionSortTest {
 	public void setUp() throws Exception {
 		log.info("===========================================================");
 	}
+	
+	@Test
+	public void testInsertionSort_WithOneElement() {
+		int[] array = { 9 };
+		log.info("Array before Insertion sorting ==> {}", array);
+		InsertionSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Insertion sorting ==> {}", array);
+		assertEquals("[9]", sorted);
+	}
+
+	@Test
+	public void testInsertionSort_WithTwoElements() {
+		int[] array = { 9, 6 };
+		log.info("Array before Insertion sorting ==> {}", array);
+		InsertionSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Insertion sorting ==> {}", array);
+		assertEquals("[6, 9]", sorted);
+	}
+
+	@Test
+	public void testInsertionSort_WithThreeElements() {
+		int[] array = { 11, 9, 6 };
+		log.info("Array before Insertion sorting ==> {}", array);
+		InsertionSort.sort(array);
+		String sorted = Util.toString(array);
+		log.info("Array after Insertion sorting ==> {}", array);
+		assertEquals("[6, 9, 11]", sorted);
+	}
 
 	@Test
 	public void testInsertionSort_One() {
