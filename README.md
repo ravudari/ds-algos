@@ -4,7 +4,7 @@ Data Structures and Algorithms in Java
 * Selection Sort
 * Bubble Sort
 * Insertion Sort
-* Sell Sort
+* Shell Sort
 * Merge Sort
 * Quick Sort
 
