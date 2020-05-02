@@ -1,6 +1,6 @@
 package com.felix.ds.tree;
 
-import com.felix.ds.Queue;
+import com.felix.ds.queue.Queue;
 
 import lombok.extern.log4j.Log4j2;
 
