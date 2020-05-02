@@ -1,9 +1,8 @@
 package com.felix.ds.search;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import lombok.extern.log4j.Log4j2;
