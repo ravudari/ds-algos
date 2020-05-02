@@ -1,4 +1,4 @@
-package com.felix.ds;
+package com.felix.ds.queue;
 
 import java.lang.reflect.Array;
 

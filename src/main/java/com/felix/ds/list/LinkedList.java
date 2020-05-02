@@ -1,7 +1,4 @@
-/**
- * 
- */
-package com.felix.ds;
+package com.felix.ds.list;
 
 import lombok.extern.log4j.Log4j2;
 

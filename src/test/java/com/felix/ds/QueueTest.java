@@ -11,6 +11,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import com.felix.ds.queue.Queue;
+
 import lombok.extern.log4j.Log4j2;
 
 /**
