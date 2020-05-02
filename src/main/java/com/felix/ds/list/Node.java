@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.felix.ds;
+package com.felix.ds.list;
 
 import lombok.Getter;
 import lombok.Setter;

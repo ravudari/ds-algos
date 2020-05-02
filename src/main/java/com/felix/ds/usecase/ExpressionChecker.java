@@ -3,7 +3,7 @@ package com.felix.ds.usecase;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.felix.ds.Stack;
+import com.felix.ds.stack.Stack;
 
 import lombok.extern.log4j.Log4j2;
 

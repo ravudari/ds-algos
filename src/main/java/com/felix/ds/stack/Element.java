@@ -1,4 +1,4 @@
-package com.felix.ds;
+package com.felix.ds.stack;
 
 import lombok.Getter;
 import lombok.NonNull;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.felix.ds;
+package com.felix.ds.stack;
 
 import lombok.Getter;
 import lombok.extern.log4j.Log4j2;

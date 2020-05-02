@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.felix.ds.list.LinkedList;
+
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
