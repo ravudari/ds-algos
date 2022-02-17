@@ -33,7 +33,7 @@ Data Structures and Algorithms in Java
 
 * [Quick Sort](./src/main/java/com/felix/ds/sort/QuickSort.java)
 
-* Binary Search
+* [Binary Search](.src/main/java/com/felix/ds/search/BinarySearch.java)
 
 * Binary Tree
 
